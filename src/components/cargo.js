@@ -2,7 +2,7 @@ import React from 'react';
 
 class Cargo extends React.Component {
   state = {
-    data: {},
+    data: [],
   }
 
   componentDidMount() {
@@ -24,9 +24,12 @@ class Cargo extends React.Component {
         <h3>Información del films</h3>
         
         {console.log(this.state.data)}
-          {/* {this.state.data.map(filmTitle => (
-            <span>{filmTitle.id}</span>
-          ))} */}
+          {this.state.data.map(filmTitle => (
+            <ul>            
+              {/* <li>{filmTitle.id}</li> */}
+              <li>{filmTitle.title}</li>
+            </ul>
+          ))}
         
       </div>
     )
